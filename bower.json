@@ -1,0 +1,14 @@
+{
+  "name": "player",
+  "version": "0.0.1",
+  "main": ["player.js", "player.min.js"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "devDependencies": {
+    "jquery": "~2.0.0",
+    "bootstrap": "~2.3.1"
+  }
+}

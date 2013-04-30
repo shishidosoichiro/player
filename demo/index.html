@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <title>Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../components/bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../components/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../components/bootstrap/assets/js/html5shiv.js"></script>
+    <![endif]-->
+    
+    <style>
+    	.player {
+    		width: 100%;
+    		height: 100%;
+    	}
+    	.player iframe {
+    		width: 100%;
+    		height: 100%;
+    	}
+    </style>
+		
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<h1>Player jQuery plugin</h1>
+					<p>Player jQuery plugin provides a common interface to Youtube and Vimeo Player API.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span8">
+					<h3>HTML</h3>
+<pre>
+&lt;script src="/js/player.js"&gt;&lt;/script&gt;
+</pre>
+					<h3>Javascript</h3>
+<pre>
+$('.player').player({url:'http://www.youtube.com/watch?v=yb512wSjyVs'});
+</pre>
+					<h3>Demo</h3>
+					<div class="well">
+						<form class="form-inline inject">
+							<div class="input-append input-prepend">
+								<input class="span5 url" id="url" type="text" placeholder="Input URL and press enter key." value="">
+								<div class="btn-group">
+									<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+										Chose movie
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a href="#">http://www.youtube.com/watch?v=yb512wSjyVs</a></li>
+										<li><a href="#">http://vimeo.com/59361603</a></li>
+									</ul>
+								</div>
+								<button class="btn btn-primary">Load</button>
+							</div>
+							<label class="checkbox">
+								<input type="checkbox" class="auto" />
+								Auto play
+							</label>
+						</form>
+						<div class="input-prepend input-append">
+							<button class="btn btn-primary stop"><i class="icon-stop icon-white"></i></button>
+							<button class="btn btn-primary play"><i class="icon-play icon-white"></i></button>
+							<button class="btn btn-primary pause"><i class="icon-pause icon-white"></i></button>
+						</div>					
+						<div class="input-prepend">
+							<button class="btn btn-primary seek">Seek</button>
+							<input type="text" class="degree span1" placeholder="" value="60" />
+						</div>
+						<div class="input-prepend">
+							<button class="btn btn-primary volume"><i class="icon-volume-up icon-white"></i> Volume</button>
+							<input type="text" class="degree span1" placeholder="" value="50" />
+						</div>					
+					</div>
+					<div class="player">
+					</div>
+				</div>
+				<div class="span4">
+					<table class="table table-condensed">
+						<thead>
+							<th>Log</th>
+							<th>Detail</th>
+						</thead>
+						<tbody class="log">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	
+		<script src="../components/jquery/jquery.js"></script>
+		<script src="../components/bootstrap/docs/assets/js/bootstrap.js"></script>
+		<script src="../build/player.js"></script>
+		<script src="application.js"></script>
+	</body>
+</html>
