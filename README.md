@@ -1,7 +1,6 @@
+# [Player jQuery plugin]
 
-# [Player]
-
-Player is video player for youtube.com and so on...
+Player jQuery plugin provides a common interface to Youtube and Vimeo Player API.
 
 
 ## Caution!!
@@ -15,8 +14,7 @@ I don't test this yet. wait a while...
 ```
 
 ```javascript
-var player = Player({'$el':$('.player'), url:'http://www.youtube.com/watch?v=yb512wSjyVs'});
-player.play();
+$('.player').player({url:'http://www.youtube.com/watch?v=yb512wSjyVs'});
 $('.player').on('end', function(player){
 	alert('ended!');
 });
@@ -25,7 +23,7 @@ $('.player').on('end', function(player){
 ## Supported players
 
 * Youtube 
-* Vimeo()
+* Vimeo
 
 ## Events
 
@@ -45,19 +43,9 @@ $('.player').on('end', function(player){
 
 ### play(options)
 
-play a loaded video.options are:
-
-* $el: jQuery object 
-* url: video's url(ex:http://www.youtube.com/watch?v=yb512wSjyVs)
-* seek: seek time
-
 ### stop()
 
-start a video.
-
 ### seek(seekTime)
-
-seek a video to seekTime.
 
 ## Author
 
@@ -70,4 +58,4 @@ seek a video to seekTime.
 
 ## License
 
-deferred available under MIT license
+Player jQuery plugin available under MIT license
