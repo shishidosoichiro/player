@@ -74,7 +74,7 @@
 			var $this = $(this)
 				, data = $this.data('player')
 			if (!data) $this.data('player', (data = Player.create($this, option)))
-			if (typeof option == 'object') $this.data('player', (data = Player.create($this, option)))
+			else if (typeof option == 'object') $this.data('player', (data = Player.create($this, option)))
 			if (typeof option == 'string') data[option](option2)
 		})
 	}
