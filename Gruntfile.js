@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-			files: ['<%= jshint.node.files %>', '<%= jshint.client.files %>', '<%= jshint.example.files %>'],
+			files: ['<%= jshint.node.files %>', '<%= jshint.client.files %>', '<%= jshint.demo.files %>'],
 			tasks: ['jshint', 'concat', 'uglify']
 		}
   });
