@@ -1,6 +1,6 @@
 {
   "name": "player",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Player jQuery plugin provides a common interface to Youtube and Vimeo Player API.",
   "main": ["player.js", "player.min.js"],
   "scripts": {
