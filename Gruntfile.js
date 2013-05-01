@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 				},
 				files: 'src/*.js'
 			},
-			example: {
+			demo: {
 				options: { 
 					jquery: true
 				},
