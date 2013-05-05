@@ -19,11 +19,11 @@ module.exports = function(grunt) {
 				},
 				files: 'src/*.js'
 			},
-			demo: {
+			docs: {
 				options: { 
 					jquery: true
 				},
-				files: 'example/*.js'
+				files: 'docs/*.js'
 			}
     },
     concat: {
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-			files: ['<%= jshint.node.files %>', '<%= jshint.client.files %>', '<%= jshint.demo.files %>'],
+			files: ['<%= jshint.node.files %>', '<%= jshint.client.files %>', '<%= jshint.docs.files %>'],
 			tasks: ['jshint', 'concat', 'uglify']
 		}
   });
