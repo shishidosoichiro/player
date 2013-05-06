@@ -41,6 +41,12 @@
 				for (key in by) merged[key] = by[key];
 				return merged;
 			}
+			,getScript: function(url){
+				if (!this.scripts) this.scripts = {};
+				if (this.scripts[url]) return this.scripts[url];
+				this.scripts[url] = $.getScript(url);
+				return this.scripts[url];
+			}
 			,id: function() {return 'player-' + Math.floor(Math.random() * 100000)}
 		};
 		var factory = function($el, options){
@@ -74,7 +80,7 @@
 			var $this = $(this)
 				, data = $this.data('player')
 			if (!data) $this.data('player', (data = Player.create($this, option)))
-			if (typeof option == 'object') $this.data('player', (data = Player.create($this, option)))
+			else if (typeof option == 'object') $this.data('player', (data = Player.create($this, option)))
 			if (typeof option == 'string') data[option](option2)
 		})
 	}
