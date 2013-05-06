@@ -49,11 +49,9 @@
 		}
 		,_seek: function(seek) {
 			this.inner.api('seekTo', seek);
-			this.$el.trigger('seek', this);
 		}
 		,_stop: function() {
 			this.inner.api('unload');
-			this.$el.trigger('clear', this);
 		}
 		,_volume: function(volume) {
 			var volume = volume / 100;
