@@ -1,6 +1,6 @@
 # [Player jQuery plugin]
 
-Player jQuery plugin provides a common interface to Youtube and Vimeo Player API.
+Player jQuery plugin provides a common interface to Youtube and Vimeo Player API. Demo page is [http://shishidosoichiro.github.com/player](here).
 
 
 ## Quick start
