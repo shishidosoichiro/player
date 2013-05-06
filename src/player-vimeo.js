@@ -18,7 +18,7 @@
 		var url = util.url(options.url);
 		var src = playerUrl.replace('{{videoId}}', url.pathname).replace('{{id}}', id);
 		// load library
-		$.getScript(libraryUrl).then(function(){
+		util.getScript(libraryUrl).then(function(){
 			var iframe = $('<iframe />').attr({'id': id, 'src': src, 'width': '100%', 'height': '100%', 'frameborder': '0'}).appendTo($el.empty())[0];
 			that.inner = $f(iframe);
 			that.inner.addEvent('ready', function(id){that.ready(id)});
@@ -49,11 +49,9 @@
 		}
 		,_seek: function(seek) {
 			this.inner.api('seekTo', seek);
-			this.$el.trigger('seek', this);
 		}
 		,_stop: function() {
 			this.inner.api('unload');
-			this.$el.trigger('clear', this);
 		}
 		,_volume: function(volume) {
 			var volume = volume / 100;
